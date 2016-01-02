@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Invino - CellarTracker Integration
 // @namespace    http://www.invino.com/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Display CellarTracker search button on Invino product pages
 // @match        https://www.invino.com/
 // @match        https://www.invino.com/wines/*
