@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Invino - CellarTracker Integration
 // @namespace    http://www.invino.com/
-// @version      0.1.0
+// @version      0.1.1
 // @description  Display CellarTracker search button on Invino product pages
 // @match        https://www.invino.com/
 // @match        https://www.invino.com/wines/*
@@ -27,5 +27,4 @@ for (var J = 0;  J < products.length;  J++) {
     ;
     zNode.setAttribute ('id', 'myContainer');
     product.appendChild(zNode);
-    console.log(name);
 };
