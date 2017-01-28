@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Invino - CellarTracker Integration
 // @namespace    http://www.invino.com/
-// @version      0.3.0
+// @version      0.3.1
 // @description  Display CellarTracker search button on Invino product pages
 // @match        https://www.invino.com/
 // @match        https://www.invino.com/wines/*
@@ -14,7 +14,7 @@ var products = document.querySelectorAll (".product-discription");
 
 for (var J = 0;  J < products.length;  J++) {
     var product = products[J];
-    #console.log(product);
+    //console.log(product);
     //Get Product Name
     var name  = product.textContent.split("\n")[1].replace(/^\s+/, '').replace(/\s+$/, '');
     name = name.split("'").join("%27");
