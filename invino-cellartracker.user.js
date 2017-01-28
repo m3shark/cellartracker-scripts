@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Invino - CellarTracker Integration
 // @namespace    http://www.invino.com/
-// @version      0.2.0
+// @version      0.3.0
 // @description  Display CellarTracker search button on Invino product pages
 // @match        https://www.invino.com/
 // @match        https://www.invino.com/wines/*
@@ -10,11 +10,11 @@
 /* jshint -W097 */
 'use strict';
 
-var products = document.querySelectorAll (".products-name");
+var products = document.querySelectorAll (".product-discription");
 
 for (var J = 0;  J < products.length;  J++) {
     var product = products[J];
-    //console.log(product);
+    #console.log(product);
     //Get Product Name
     var name  = product.textContent.split("\n")[1].replace(/^\s+/, '').replace(/\s+$/, '');
     name = name.split("'").join("%27");
@@ -26,11 +26,11 @@ for (var J = 0;  J < products.length;  J++) {
     var wsurl = "http://www.wine-searcher.com/find/"+name;
     var ctNode       = document.createElement ('div');
     ctNode.innerHTML = '<button id="myButton" type="button" onclick="window.open(\''+cturl+'\');">'
-        + '<img src="http://www.cellartracker.com/favicon2.ico"></button>'
+        + '<img src="http://www.cellartracker.com/favicon2.ico" style="height:16px;"></button>'
         + '<button id="myButton" type="button" onclick="window.open(\''+wsurl+'\');">'
         + '<img src="http://sr1.wine-searcher.net/images/favicon.1.png" style="height:16px;"></button>'
     ;
     ctNode.setAttribute ('id', 'CellarTrackerNode');
-    ctNode.setAttribute ('style', 'display:inline;');
+    ctNode.setAttribute ('style', 'display:inline;height:18px;');
     product.appendChild(ctNode);
 };
